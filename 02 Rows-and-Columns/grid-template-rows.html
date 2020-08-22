@@ -16,20 +16,24 @@
             background: gray;
 
             /* Grid */
-            display: grid;
-            /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+            display: grid;                           /*always combine to grid-template-rows/columns*/ /*this attribute is the one that populate the page*/
+            grid-template-rows: 1fr 1fr 1fr 1fr;
 
         }
         .row1{
+            grid-row: 1/2; /*used to bypass the rows form 1st down to 3rd line*/ /*if not set, by default it display equal size of rows */ /*SHOULD INCLUDE for fixed row size*/
             background: red;
         }
         .row2{
+            grid-row: 2/3;
             background: yellow;
         }
         .row3{
+            grid-row: 3/4;
             background: green;
         }
         .row4{
+            grid-row: 4/5;
             background: blue;
         }
         

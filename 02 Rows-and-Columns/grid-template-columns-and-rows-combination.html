@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid - Rows and Columns</title>
+</head>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            height: 100vh; /*whole page*/
+            background: gray;
+
+            /* Grid */
+            display: grid;                           /*always combine to grid-template-columns/columns*/ /*this attribute is the one that populate the page*/
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr; /*set this to align all columns on one row*/
+        }
+        .row1{
+            grid-column: 2/3; /*used to bypass the columns form 1st down to 3rd line*/ /*if not set, by default it display equal size of columns */ /*SHOULD INCLUDE for fixed column size*/
+            grid-row: 1/2; /*set this to align all columns on one row*/
+            background: red;
+        }
+        .row2{
+            grid-column: 1/2;
+            grid-row: 1/2; /*set this to align all columns on one row*/
+            background: yellow;
+        }
+        .row3{
+            grid-column: 4/5;
+            grid-row: 1/2; /*set this to align all columns on one row*/
+            background: green;
+        }
+        .row4{
+            grid-column: 3/4;
+            grid-row: 1/2; /*set this to align all columns on one row*/
+            background: blue;
+        }
+        
+    </style>
+<body>
+    <!-- Grid - Template Area -->
+    <div class="main">
+        <div class="row1">Row 1</div>
+        <div class="row2">Row 2</div>
+        <div class="row3">Row 3</div>
+        <div class="row4">Row 4</div>
+    </div>
+</body>
+</html>
