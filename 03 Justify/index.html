@@ -1,11 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Grid - Justify</title>
 </head>
+<style>
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+    }
+
+    .main {
+        height: 100vh;
+        /*whole page*/
+        background: gray;
+
+        /* Grid */
+        display: grid;
+        /*always combine to grid-template-rows/columns*/
+        /*this attribute is the one that populate the page*/
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+
+    }
+
+    .row1 {
+        grid-row: 1/2;
+        /*used to bypass the rows form 1st down to 3rd line*/
+        /*if not set, by default it display equal size of rows */
+        /*SHOULD INCLUDE for fixed row size*/
+        background: red;
+    }
+
+    .row2 {
+        grid-row: 2/3;
+        background: yellow;
+    }
+
+    .row3 {
+        grid-row: 3/4;
+        background: green;
+    }
+
+    .row4 {
+        grid-row: 4/5;
+        background: blue;
+    }
+</style>
+
 <body>
-    
+    <!-- Grid - Template Area -->
+    <div class="main">
+        <div class="row1">Row 1</div>
+        <div class="row2">Row 2</div>
+        <div class="row3">Row 3</div>
+        <div class="row4">Row 4</div>
+    </div>
 </body>
+
 </html>
