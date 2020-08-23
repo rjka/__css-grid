@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid - Minmax</title>
+</head>
+<style>
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+    }
+
+    .main {
+        height: 100vh;
+        background: gray;
+
+        /* Grid */
+        display: grid;
+        grid-template-columns: 1fr 1fr minmax(100px, 200px) 1fr; /*minimum 100px, maximum 200px*/
+    }
+
+    .row1 {
+        background: red;
+    }
+
+    .row2 {
+        background: yellow;
+        
+    }
+
+    .row3 {
+        background: green;
+    }
+
+    .row4 {
+        background: blue;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <div class="row1">Row 1</div>
+        <div class="row2">Row 2</div>
+        <div class="row3">Row 3</div>
+        <div class="row4">Row 4</div>
+    </div>
+</body>
+
+</html>
