@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid - Auto-fill</title>
+</head>
+<style>
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+    }
+
+    .main {
+        height: 100vh;
+        background: gray;
+
+        /* Grid */
+        display: grid;
+        /*grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));*/
+        grid-template-columns: repeat(auto-fill, 200px);
+    }
+
+    .row1 {
+        /*its okay not to set grid-column or grid-row because it fills automatically the coloumns or rows*/ 
+        background: red;
+    }
+
+    .row2 {
+        background: yellow;
+        
+    }
+
+    .row3 {
+        background: green;
+    }
+
+    .row4 {
+        background: blue;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <div class="row1">Row 1</div>
+        <div class="row2">Row 2</div>
+        <div class="row3">Row 3</div>
+        <div class="row4">Row 4</div>
+        <div class="row1">Row 1</div>
+        <div class="row2">Row 2</div>
+        <div class="row3">Row 3</div>
+        <div class="row4">Row 4</div>
+    </div>
+</body>
+
+</html>
